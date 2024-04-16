@@ -1,0 +1,46 @@
+<div class="product">
+    <div class="prod-list" onclick="cart('Samsung Note 10')">
+        <p>Samsung Note 10</p>
+        <p>Price: RM 2000</p>
+    </div>
+    <div class="prod-del">
+        <button type="button" name="button" onclick="del('Samsung Note 10')">Delete from CART</button>
+    </div>
+
+    <div class="prod-list" onclick="cart('iPhone')">
+        <p>iPhone</p>
+        <p>Price: RM 5000</p>
+    </div>
+    <div class="prod-del">
+        <button type="button" name="button" onclick="del('iPhone')">Delete from CART</button>
+    </div>
+</div>
+
+<script>
+    function cart(a) {
+        var exphone = [];
+        if (localStorage.getItem("cart") != undefined) {
+            exphone = JSON.parse(localStorage.getItem("cart"));
+        }
+        exphone.push(a);
+        localStorage.setItem("cart", JSON.stringify(exphone));
+    }
+
+    function del(b) {
+        var delphone = [];
+        if (localStorage.getItem("cart") != undefined) {
+            delphone = JSON.parse(localStorage.getItem("cart"));
+            var i = delphone.indexOf(b);
+            if (i != null) {
+                if (delphone[i] == b) {
+                    delphone.splice(i, 1);
+                    localStorage.setItem("cart", JSON.stringify(delphone));
+                } else {
+                    alert("There are no " + b + " in your cart");
+                }
+            } else {
+                alert("There are no items in your CART");
+            }
+        }
+    }
+</script>

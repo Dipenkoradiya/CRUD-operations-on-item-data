@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bodyData {
+    position: relative;
+}
+.btn {
+    padding: 8px;
+    font-size: 24px;
+    border: 2px solid black;
+    margin: 16px;
+}
+.btn:hover {
+    background: rgb(19, 0, 0);
+    color: white;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+table {
+    border: 2px solid black;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 20px;
+}
+tr {
+    text-align: center;
+}
+table th {
+    border: 1px solid black;
+    padding: 5px;
+}
+td {
+    border: 0.5px solid black;
+    padding: 8px;
+}
+.editBtn {
+    background-color: green;
+    border-radius: 5px;
+    padding: 4px;
+    cursor: pointer;
+}
+.deleteBtn {
+    background-color: red;
+    border-radius: 5px;
+    padding: 4px;
+    cursor: pointer;
+}
+.absoluteForm,
+.editAbsoluteForm {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    display: none;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    display: block;
+    width: 15%;
+}
+form div {
+    margin: 5px;
+    display: flex;
+}
